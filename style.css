@@ -82,7 +82,7 @@ button {
     font-size: 12px;
     padding: 12px 25px;
     background: transparent;
-    border: 1px solid #ffffffc9;
+    border: 1.5px solid #ffffffc9;
     border-radius: 20px;
     outline: none;
     cursor: pointer
@@ -101,7 +101,6 @@ button:hover {
 }
 
 .content {
-    color: #ffffffff;
     position: absolute;
     top: 50%;
     left: 8%;
