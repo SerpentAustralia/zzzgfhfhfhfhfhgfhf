@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>(ㅠ﹏ㅠ)</title>
+    <link rel="icon" href="images/logo.gif" type="image/gif">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlay" style="font-family: 'Quicksand', sans-serif;">
+    <div>click here</div>
+    </div>
+
+    <div class="hero">
+        <div class="navbar">
+            <img src="images/logo.gif" class="logo">
+            <button 
+            class="hover-sound-btn" 
+            type="button" 
+            style="font-family: 'Quicksand', sans-serif; font-weight: 500;"
+            onclick="window.open('mailto:im@sad.xn--6frz82g', '_blank');"
+            >
+            mail us
+            </button>
+        </div>
+        <div class="content">
+            <small>where coding meets..</small>
+            <h1>creativity<br> <span style="color: #ffffffcb">and</span> growth</h1>
+            <button 
+            class="hover-sound-btn" 
+            type="button" 
+            style="border: 2px solid #ffffffc9; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 16px; border-radius: 20px; padding: 12px 80px;"
+            onclick="window.open('https://t.me/m/2NyOeO8vYTI5', '_blank');"
+            >
+            share your ideas
+            </button>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="sounds/click.wav" preload="auto"></audio>
+
+    <script>
+    const overlay = document.getElementById('overlay');
+    const clickSound = document.getElementById('clickSound');
+    const buttons = document.querySelectorAll('.hover-sound-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            clickSound.currentTime = 0;
+            clickSound.play();
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        this.style.opacity = '0';
+        this.addEventListener('transitionend', () => {
+        this.style.display = 'none';
+        });
+    });
+    </script>
+</body>
+</html>
